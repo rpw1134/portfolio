@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: ##2a332f;
-  --color-secondary: ##303c36;
-  --color-accent: ##3aba7a;
-  --color-muted: ##44916a;
+  --color-primary: #1e201f;
+  --color-secondary: #383c3a;
+  --color-accent: #3aba7a;
+  --color-muted: #44916a;
   --color-success: #10b981;
   --color-danger: #ef4444;
   --color-warning: #f59e0b;
   --color-info: #06b6d4;
+
+  --font-garamond: "EB Garamond", serif;
+  --font-lato: "Lato", sans-serif;
 }
 
 :root {

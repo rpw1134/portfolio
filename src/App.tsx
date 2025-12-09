@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import { Aspirations } from "./Components/Routes/Aspirations";
-import { Home } from "./Components/Routes/Home";
-import { Projects } from "./Components/Routes/Projects";
-import { Experience } from "./Components/Routes/Experience";
-import { Layout } from "./Components/Nav/Layout";
+import { Aspirations } from "./components/routes/Aspirations";
+import { Home } from "./components/routes/Home";
+import { Projects } from "./components/routes/Projects";
+import { Experience } from "./components/routes/Experience";
+import Layout from "./components/nav/Layout";
 
 function App() {
   return (

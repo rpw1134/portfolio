@@ -2,6 +2,7 @@ import AboutMe from "../AboutMe";
 import { QuoteHighlight } from "../QuoteHighlight";
 import { SnapSection } from "../SnapSection";
 import TechStackScroller from "../TechStackScroller";
+import WhatImWorkingOn from "../WhatImWorkingOn";
 
 export const Home = () => {
   return (
@@ -23,6 +24,9 @@ export const Home = () => {
         </div>
       </SnapSection>
       <TechStackScroller />
+      <SnapSection backgroundColor="bg-charcoal">
+        <WhatImWorkingOn />
+      </SnapSection>
     </div>
   );
 };

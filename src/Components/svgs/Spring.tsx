@@ -1,15 +1,19 @@
 export default function SpringSVG() {
   return (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="12" cy="12" r="10" fill="#6DB33F" />
-      <path
-        d="M19.5 7.5c-1.5-2.5-4-4-7-4.5-2-.3-4 .2-5.5 1.5C5.5 6 5 7.5 5 9c0 2 1 4 2.5 5.5 1 1 2 1.5 3.5 2 1 .3 2 .3 3 0 1.5-.3 3-1.5 4-3 .5-1 1-2 1-3.5 0-.5 0-1-.5-1.5v-1z"
+      <rect width="24" height="24" rx="2" fill="#6DB33F" />
+      <text
+        x="50%"
+        y="50%"
+        dominantBaseline="central"
+        textAnchor="middle"
+        fontFamily="Arial, sans-serif"
+        fontSize="14"
+        fontWeight="bold"
         fill="white"
-      />
-      <path
-        d="M16.5 10c-.5-.5-1-1-1.5-1-.5-.3-1-.3-1.5 0-.5.3-1 .5-1.5 1-.3.5-.5 1-.5 1.5s.2 1 .5 1.5c.5.5 1 1 1.5 1 .5.3 1 .3 1.5 0 .5-.3 1-.5 1.5-1 .3-.5.5-1 .5-1.5s-.2-1-.5-1.5z"
-        fill="#6DB33F"
-      />
+      >
+        S
+      </text>
     </svg>
   );
 }

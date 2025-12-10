@@ -3,6 +3,10 @@
 @theme {
   --color-primary: #1e201f;
   --color-secondary: #383c3a;
+  --color-tertiary: #2a2d2b;
+  --color-charcoal: #252725;
+  --color-slate: #2f3331;
+  --color-olive: #323530;
   --color-accent: #3aba7a;
   --color-muted: #44916a;
   --color-accent-muted: rgba(58, 186, 122, 0.1);

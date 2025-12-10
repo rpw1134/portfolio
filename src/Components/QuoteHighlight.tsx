@@ -5,8 +5,7 @@ interface QuoteHighlightProps {
   author: string;
   authorLink?: string;
   highlightRadius?: number;
-  highlightColor?: string;
-  defaultColor?: string;
+  textColor?: string;
 }
 
 export const QuoteHighlight = ({
@@ -14,13 +13,12 @@ export const QuoteHighlight = ({
   author,
   authorLink,
   highlightRadius = 85,
-  highlightColor = "rgb(58, 186, 122)",
-  defaultColor = "rgb(255, 255, 255)",
+  textColor = "rgb(200, 200, 200)",
 }: QuoteHighlightProps) => {
   const characters = quote.split("");
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [charColors, setCharColors] = useState<string[]>(
-    characters.map(() => defaultColor)
+    characters.map(() => textColor)
   );
   const containerRef = useRef<HTMLParagraphElement>(null);
   const charRefs = useRef<(HTMLSpanElement | null)[]>([]);
@@ -34,9 +32,23 @@ export const QuoteHighlight = ({
     }
   };
 
+  // Parse RGB from textColor and create brighter version
+  const getBrighterColor = (color: string): string => {
+    const rgbMatch = color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+    if (rgbMatch) {
+      const r = Math.min(255, parseInt(rgbMatch[1]) + 55);
+      const g = Math.min(255, parseInt(rgbMatch[2]) + 55);
+      const b = Math.min(255, parseInt(rgbMatch[3]) + 55);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+    return "rgb(255, 255, 255)";
+  };
+
+  const brighterColor = getBrighterColor(textColor);
+
   useEffect(() => {
     const newColors = charRefs.current.map((charRef) => {
-      if (!charRef || !containerRef.current) return defaultColor;
+      if (!charRef || !containerRef.current) return textColor;
 
       const rect = charRef.getBoundingClientRect();
       const containerRect = containerRef.current.getBoundingClientRect();
@@ -49,17 +61,11 @@ export const QuoteHighlight = ({
           Math.pow(mousePos.y - charCenterY, 2)
       );
 
-      return distance <= highlightRadius ? highlightColor : defaultColor;
+      return distance <= highlightRadius ? brighterColor : textColor;
     });
 
     setCharColors(newColors);
-  }, [
-    mousePos,
-    characters.length,
-    highlightRadius,
-    highlightColor,
-    defaultColor,
-  ]);
+  }, [mousePos, characters.length, highlightRadius, brighterColor, textColor]);
 
   return (
     <div className="flex flex-col animate-float">
@@ -76,7 +82,7 @@ export const QuoteHighlight = ({
             ref={(el) => {
               charRefs.current[index] = el;
             }}
-            className="transition-colors duration-75 ease-out"
+            className="transition-colors duration-150 ease-out"
             style={{
               color: charColors[index],
             }}
@@ -91,7 +97,6 @@ export const QuoteHighlight = ({
           className="ml-[40rem] italic font-garamond cursor-pointer"
           href={authorLink}
           target="_blank"
-          rel="noopener noreferrer"
         >
           – {author}
         </a>

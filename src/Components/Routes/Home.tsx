@@ -1,3 +1,4 @@
+import AboutMe from "../AboutMe";
 import { QuoteHighlight } from "../QuoteHighlight";
 import { SnapSection } from "../SnapSection";
 
@@ -11,13 +12,12 @@ export const Home = () => {
               quote="The best way to predict the future is to invent it."
               author="Alan Kay"
               authorLink="https://en.wikipedia.org/wiki/Alan_Kay"
-              highlightColor="rgb(68,145,106)"
             />
           </div>
         </div>
       </SnapSection>
       <SnapSection backgroundColor="bg-black">
-        <div>hello</div>
+        <AboutMe />
       </SnapSection>
     </div>
   );

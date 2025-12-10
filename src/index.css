@@ -5,6 +5,7 @@
   --color-secondary: #383c3a;
   --color-accent: #3aba7a;
   --color-muted: #44916a;
+  --color-accent-muted: rgba(58, 186, 122, 0.1);
   --color-success: #10b981;
   --color-danger: #ef4444;
   --color-warning: #f59e0b;
@@ -97,4 +98,19 @@ button:focus-visible {
 
 .animate-scroll {
   animation: scroll 3s linear infinite;
+}
+
+.scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.tech-stack-item {
+  background-color: var(--color-accent-muted);
+  border: 1px solid rgba(58, 186, 122, 0.2);
+  transition: all 0.2s ease;
+}
+
+.tech-stack-item:hover {
+  background-color: rgba(58, 186, 122, 0.15);
+  border-color: rgba(58, 186, 122, 0.3);
 }

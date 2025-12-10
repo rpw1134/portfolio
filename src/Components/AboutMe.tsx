@@ -3,11 +3,14 @@ export default function AboutMe() {
     <div className="w-[95vw] h-[95vh] mx-auto my-auto bg-slate rounded-lg">
       <div className="flex h-full items-center justify-between gap-20 p-16">
         <div className="w-[40%]">
-          <div className="overflow-hidden rounded-lg border border-secondary">
+          <div className="overflow-hidden rounded-lg">
             <img
               src="../../public/ryan_puerto_rico.png"
               alt="Profile Picture"
-              className="h-[70vh] w-full object-cover"
+              className="h-[70vh] w-full object-cover shadow-2xl"
+              style={{
+                filter: 'contrast(1.05) brightness(1.02)',
+              }}
             />
           </div>
         </div>

@@ -41,11 +41,14 @@ export default function WhatImWorkingOn() {
         </div>
 
         <div className="w-[55%]">
-          <div className="overflow-hidden rounded-lg border border-secondary">
+          <div className="overflow-hidden rounded-lg">
             <img
               src="../../public/rag_dash.png"
               alt="Current Project"
-              className=" object-cover"
+              className="w-full object-cover shadow-2xl"
+              style={{
+                filter: 'contrast(1.05) brightness(1.02)',
+              }}
             />
           </div>
         </div>

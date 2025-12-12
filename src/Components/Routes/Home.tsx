@@ -5,6 +5,7 @@ import TechStackScroller from "../TechStackScroller";
 import WhatImWorkingOn from "../WhatImWorkingOn";
 import ScrollIndicator from "../ScrollIndicator";
 import Contact from "../Contact";
+import InfrastructureDevOpsScroller from "../InfrastructureDevOpsScroller";
 
 export const Home = () => {
   const scrollToAboutMe = () => {
@@ -28,6 +29,7 @@ export const Home = () => {
           <ScrollIndicator onClick={scrollToAboutMe} />
         </div>
       </SnapSection>
+      <InfrastructureDevOpsScroller />
       <SnapSection backgroundColor="bg-tertiary">
         <div id="about-me-section" className="flex flex-col gap-12">
           <AboutMe />

@@ -6,4 +6,11 @@ export const techColors: Record<string, string> = {
   "Next.js": "#000000",
   FastAPI: "#009688",
   Spring: "#6DB33F",
+  Prisma: "#2D3748",
+  Supabase: "#3ECF8E",
+  Redis: "#DC382D",
+  Git: "#F05032",
+  GitHub: "#181717",
+  "GitHub Actions": "#2088FF",
+  Playwright: "#2EAD33",
 };

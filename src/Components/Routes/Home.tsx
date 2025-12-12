@@ -4,6 +4,7 @@ import { SnapSection } from "../SnapSection";
 import TechStackScroller from "../TechStackScroller";
 import WhatImWorkingOn from "../WhatImWorkingOn";
 import ScrollIndicator from "../ScrollIndicator";
+import Contact from "../Contact";
 
 export const Home = () => {
   const scrollToAboutMe = () => {
@@ -36,6 +37,7 @@ export const Home = () => {
       <SnapSection backgroundColor="bg-charcoal">
         <WhatImWorkingOn />
       </SnapSection>
+      <Contact />
     </div>
   );
 };

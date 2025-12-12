@@ -29,7 +29,7 @@ export default function TechStackScroller() {
             Technologies
           </p>
           <h2 className="font-garamond text-6xl font-light text-white">
-            Tech Stack
+            Languages, Libraries & Frameworks
           </h2>
           <div className="h-px w-20 bg-white/20" />
         </div>

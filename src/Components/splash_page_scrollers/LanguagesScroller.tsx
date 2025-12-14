@@ -1,12 +1,12 @@
-import TechStackElement from "./TechStackElement";
-import PythonSVG from "./svgs/Python";
-import TypeScriptSVG from "./svgs/TypeScript";
-import JavaSVG from "./svgs/Java";
-import JavaScriptSVG from "./svgs/JavaScript";
-import CSVG from "./svgs/C";
-import HTML5SVG from "./svgs/HTML5";
-import CSSSVG from "./svgs/CSS";
-import { techColors } from "../utils/techColors";
+import TechStackElement from "../splash_page_sections/TechStackElement";
+import PythonSVG from "../svgs/Python";
+import TypeScriptSVG from "../svgs/TypeScript";
+import JavaSVG from "../svgs/Java";
+import JavaScriptSVG from "../svgs/JavaScript";
+import CSVG from "../svgs/C";
+import HTML5SVG from "../svgs/HTML5";
+import CSSSVG from "../svgs/CSS";
+import { techColors } from "../../utils/techColors";
 
 export default function LanguagesScroller() {
   const languages = [

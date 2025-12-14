@@ -1,12 +1,12 @@
-import TechStackElement from "./TechStackElement";
-import PrismaSVG from "./svgs/Prisma";
-import SupabaseSVG from "./svgs/Supabase";
-import RedisSVG from "./svgs/Redis";
-import GitSVG from "./svgs/Git";
-import GitHubSVG from "./svgs/GitHub";
-import GitHubActionsSVG from "./svgs/GitHubActions";
-import PlaywrightSVG from "./svgs/Playwright";
-import { techColors } from "../utils/techColors";
+import TechStackElement from "../splash_page_sections/TechStackElement";
+import PrismaSVG from "../svgs/Prisma";
+import SupabaseSVG from "../svgs/Supabase";
+import RedisSVG from "../svgs/Redis";
+import GitSVG from "../svgs/Git";
+import GitHubSVG from "../svgs/GitHub";
+import GitHubActionsSVG from "../svgs/GitHubActions";
+import PlaywrightSVG from "../svgs/Playwright";
+import { techColors } from "../../utils/techColors";
 
 export default function InfrastructureDevOpsScroller() {
   const techStack = [

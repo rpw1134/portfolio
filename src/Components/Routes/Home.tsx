@@ -1,13 +1,13 @@
-import AboutMe from "../AboutMe";
+import AboutMe from "../splash_page_sections/AboutMe";
 import { QuoteHighlight } from "../QuoteHighlight";
-import { SnapSection } from "../SnapSection";
-import WhatImWorkingOn from "../WhatImWorkingOn";
-import ScrollIndicator from "../ScrollIndicator";
-import Contact from "../Contact";
-import InfrastructureDevOpsScroller from "../InfrastructureDevOpsScroller";
-import MyGoals from "../MyGoals";
-import LibFrameworkScroller from "../LibFrameworkScroller";
-import LanguagesScroller from "../LanguagesScroller";
+import { SnapSection } from "../splash_page_sections/SnapSection";
+import WhatImWorkingOn from "../splash_page_sections/WhatImWorkingOn";
+import ScrollIndicator from "../splash_page_sections/ScrollIndicator";
+import Contact from "../splash_page_sections/Contact";
+import InfrastructureDevOpsScroller from "../splash_page_scrollers/InfrastructureDevOpsScroller";
+import MyGoals from "../splash_page_sections/MyGoals";
+import LibFrameworkScroller from "../splash_page_scrollers/LibFrameworkScroller";
+import LanguagesScroller from "../splash_page_scrollers/LanguagesScroller";
 
 export const Home = () => {
   const scrollToAboutMe = () => {
@@ -31,17 +31,17 @@ export const Home = () => {
           <ScrollIndicator onClick={scrollToAboutMe} />
         </div>
       </SnapSection>
-      <LibFrameworkScroller />
       <LanguagesScroller />
-      <InfrastructureDevOpsScroller />
       <SnapSection backgroundColor="bg-tertiary">
         <div id="about-me-section" className="flex flex-col gap-12">
           <AboutMe />
         </div>
       </SnapSection>
+      <InfrastructureDevOpsScroller />
       <SnapSection backgroundColor="bg-tertiary">
         <WhatImWorkingOn />
       </SnapSection>
+      <LibFrameworkScroller />
       <SnapSection backgroundColor="bg-tertiary">
         <MyGoals />
       </SnapSection>

@@ -1,12 +1,12 @@
-import TechStackElement from "./TechStackElement";
-import NextJSSVG from "./svgs/NextJS";
-import ReactSVG from "./svgs/React";
-import ExpressSVG from "./svgs/Express";
-import SpringSVG from "./svgs/Spring";
-import FastAPISVG from "./svgs/FastAPI";
-import NodeJSSVG from "./svgs/NodeJS";
-import TailwindCSSSVG from "./svgs/TailwindCSS";
-import { techColors } from "../utils/techColors";
+import TechStackElement from "../splash_page_sections/TechStackElement";
+import NextJSSVG from "../svgs/NextJS";
+import ReactSVG from "../svgs/React";
+import ExpressSVG from "../svgs/Express";
+import SpringSVG from "../svgs/Spring";
+import FastAPISVG from "../svgs/FastAPI";
+import NodeJSSVG from "../svgs/NodeJS";
+import TailwindCSSSVG from "../svgs/TailwindCSS";
+import { techColors } from "../../utils/techColors";
 
 export default function LibFrameworkScroller() {
   const librariesFrameworks = [

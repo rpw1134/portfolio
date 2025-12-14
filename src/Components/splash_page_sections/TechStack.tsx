@@ -1,5 +1,5 @@
-import { TechStack as TechStackType } from "../types/TechStack";
-import { techLogos } from "../utils/techLogos";
+import { TechStack as TechStackType } from "../../types/TechStack";
+import { techLogos } from "../../utils/techLogos";
 
 interface TechStackProps {
   items: TechStackType[];

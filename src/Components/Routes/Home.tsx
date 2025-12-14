@@ -1,11 +1,13 @@
 import AboutMe from "../AboutMe";
 import { QuoteHighlight } from "../QuoteHighlight";
 import { SnapSection } from "../SnapSection";
-import TechStackScroller from "../TechStackScroller";
 import WhatImWorkingOn from "../WhatImWorkingOn";
 import ScrollIndicator from "../ScrollIndicator";
 import Contact from "../Contact";
 import InfrastructureDevOpsScroller from "../InfrastructureDevOpsScroller";
+import MyGoals from "../MyGoals";
+import LibFrameworkScroller from "../LibFrameworkScroller";
+import LanguagesScroller from "../LanguagesScroller";
 
 export const Home = () => {
   const scrollToAboutMe = () => {
@@ -29,15 +31,19 @@ export const Home = () => {
           <ScrollIndicator onClick={scrollToAboutMe} />
         </div>
       </SnapSection>
+      <LibFrameworkScroller />
+      <LanguagesScroller />
       <InfrastructureDevOpsScroller />
       <SnapSection backgroundColor="bg-tertiary">
         <div id="about-me-section" className="flex flex-col gap-12">
           <AboutMe />
         </div>
       </SnapSection>
-      <TechStackScroller />
-      <SnapSection backgroundColor="bg-charcoal">
+      <SnapSection backgroundColor="bg-tertiary">
         <WhatImWorkingOn />
+      </SnapSection>
+      <SnapSection backgroundColor="bg-tertiary">
+        <MyGoals />
       </SnapSection>
       <Contact />
     </div>

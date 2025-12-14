@@ -101,9 +101,7 @@ export const QuoteHighlight = ({
           – {author}
         </a>
       ) : (
-        <p className={`ml-[40rem] italic font-garamond text-black`}>
-          – {author}
-        </p>
+        <p className={`ml-[40rem] italic font-garamond`}>– {author}</p>
       )}
     </div>
   );

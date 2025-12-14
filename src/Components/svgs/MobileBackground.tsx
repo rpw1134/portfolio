@@ -1,0 +1,60 @@
+export const MobileBackground = () => (
+  <svg
+    viewBox="0 0 400 320"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-full h-full"
+  >
+    <rect
+      x="140"
+      y="40"
+      width="120"
+      height="240"
+      rx="12"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <line
+      x1="140"
+      y1="70"
+      x2="260"
+      y2="70"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <circle cx="200" cy="260" r="8" stroke="currentColor" strokeWidth="2" />
+    <rect
+      x="160"
+      y="100"
+      width="80"
+      height="60"
+      rx="4"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <line
+      x1="160"
+      y1="180"
+      x2="240"
+      y2="180"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <line
+      x1="160"
+      y1="200"
+      x2="240"
+      y2="200"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+    <line
+      x1="160"
+      y1="220"
+      x2="210"
+      y2="220"
+      stroke="currentColor"
+      strokeWidth="2"
+    />
+  </svg>
+);

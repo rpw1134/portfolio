@@ -8,7 +8,7 @@ export const experienceData: ExperienceNode[] = [
     description:
       "Led a team of 5 engineers to develop a microservices architecture, improving system scalability by 300%. Implemented CI/CD pipelines and reduced deployment time by 60%.",
     date: "2023 - Present",
-    image: "", // placeholder for image URL
+    image: "../../../public/ryan_puerto_rico.png", // placeholder for image URL
   },
   {
     id: "2",
@@ -53,6 +53,6 @@ export const experienceData: ExperienceNode[] = [
     description:
       "Contributed to the development of internal tools and automation scripts. Learned best practices in code review, testing, and version control.",
     date: "Summer 2018",
-    image: "", // placeholder for image URL
+    image: "../../../public/ryan_green.png", // placeholder for image URL
   },
 ];

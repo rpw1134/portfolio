@@ -10,6 +10,8 @@ const projectsData: ProjectBoxProps[] = [
       "An intelligent research assistant that helps students find and analyze academic papers using natural language processing and machine learning.",
     tags: ["Python", "NLP", "RAG", "LangChain"],
     primaryTag: "ai",
+    images: ["/rag_dash.png", "/rag_menu.png", "/Solutions-of-AI-in-DevOps.png"],
+    githubLink: "https://github.com/yourusername/ai-research-assistant",
   },
   {
     id: "2",
@@ -18,6 +20,10 @@ const projectsData: ProjectBoxProps[] = [
       "A modern e-commerce platform built with React and Node.js, featuring real-time inventory management and secure payment processing.",
     tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
     primaryTag: "web",
+    images: ["/ryan_green.png", "/ryan_greenremovebg.png"],
+    hostedAt: "https://example.com",
+    githubLink: "https://github.com/yourusername/ecommerce-platform",
+    demoLink: "https://demo.example.com",
   },
   {
     id: "3",
@@ -26,6 +32,8 @@ const projectsData: ProjectBoxProps[] = [
       "An interactive dashboard for visualizing complex datasets with real-time updates and customizable charts for business analytics.",
     tags: ["D3.js", "TypeScript", "MongoDB", "WebSocket"],
     primaryTag: "data",
+    images: ["/ryan_puerto_rico.png"],
+    githubLink: "https://github.com/yourusername/data-dashboard",
   },
   {
     id: "5",
@@ -34,6 +42,8 @@ const projectsData: ProjectBoxProps[] = [
       "Automated deployment pipeline and infrastructure as code solution for managing cloud resources across multiple environments.",
     tags: ["AWS", "Terraform", "Docker", "GitHub Actions"],
     primaryTag: "infrastructure",
+    images: ["/rag_dash.png"],
+    githubLink: "https://github.com/yourusername/cloud-automation",
   },
 ];
 

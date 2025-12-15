@@ -7,6 +7,12 @@ export interface ProjectBoxProps {
   description: string;
   tags: string[];
   primaryTag: string;
+  images: string[];
+  demoLink?: string;
+  demoThumbnail?: string;
+  hostedAt?: string;
+  githubLink?: string;
+  onClick?: () => void;
 }
 
 export const ProjectBox = ({
@@ -14,11 +20,12 @@ export const ProjectBox = ({
   description,
   tags,
   primaryTag,
+  onClick,
 }: ProjectBoxProps) => {
   const BackgroundSVG = projectBackgrounds[primaryTag];
 
   return (
-    <ProjectBoxCard backgroundSVG={BackgroundSVG}>
+    <ProjectBoxCard backgroundSVG={BackgroundSVG} onClick={onClick}>
       <div className="space-y-4">
         <h3 className="font-garamond text-2xl font-light text-white">
           {title}

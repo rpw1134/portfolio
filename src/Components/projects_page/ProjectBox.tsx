@@ -20,7 +20,7 @@ export const ProjectBox = ({
   return (
     <ProjectBoxCard backgroundSVG={BackgroundSVG}>
       <div className="space-y-4">
-        <h3 className="font-garamond text-3xl font-light text-white">
+        <h3 className="font-garamond text-2xl font-light text-white">
           {title}
         </h3>
         <p className="font-lato text-base font-light leading-relaxed text-white/70">
@@ -32,7 +32,7 @@ export const ProjectBox = ({
         {tags.map((tag, index) => (
           <span
             key={index}
-            className="px-3 py-1 text-xs font-lato text-white/60 bg-white/5 border border-white/10 rounded-full"
+            className="px-3 py-1 text-xs font-lato text-white/60 bg-white/5 border border-white/10 rounded-full mt-6"
           >
             {tag}
           </span>

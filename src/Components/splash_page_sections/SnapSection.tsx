@@ -3,11 +3,13 @@ import { useEffect, useRef, useState } from "react";
 interface SnapSectionProps {
   children: React.ReactNode;
   backgroundColor?: string;
+  fullHeight?: boolean;
 }
 
 export const SnapSection = ({
   children,
   backgroundColor = "bg-primary",
+  fullHeight = true,
 }: SnapSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [hasSnapped, setHasSnapped] = useState(false);
@@ -79,7 +81,11 @@ export const SnapSection = ({
   return (
     <div
       ref={sectionRef}
-      className={`h-screen w-screen flex items-center justify-center ${backgroundColor}`}
+      className={`${
+        fullHeight ? "h-screen" : "min-h-screen py-16"
+      } w-screen flex justify-center ${
+        fullHeight ? "items-center" : "items-start"
+      } ${backgroundColor}`}
     >
       {children}
     </div>

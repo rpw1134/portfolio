@@ -1,11 +1,8 @@
-import { useRef } from "react";
 import { QuoteHighlight } from "../QuoteHighlight";
 import { SnapSection } from "../splash_page_sections/SnapSection";
 import { ExperienceContainer } from "../experience_page/ExperienceContainer";
 
 export const Experience = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
   return (
     <div className="w-screen h-auto">
       <SnapSection backgroundColor="bg-charcoal">
@@ -20,11 +17,8 @@ export const Experience = () => {
         </div>
       </SnapSection>
 
-      <SnapSection backgroundColor="bg-tertiary">
-        <div
-          ref={scrollContainerRef}
-          className="w-[95vw] h-[95vh] mx-auto my-auto bg-slate rounded-lg p-12 overflow-y-auto"
-        >
+      <SnapSection backgroundColor="bg-tertiary" fullHeight={false}>
+        <div className="w-[95vw] mx-auto bg-slate rounded-lg p-12">
           <div className="space-y-8 mb-8">
             <h1 className="font-garamond text-7xl font-light text-white">
               Experience
@@ -32,7 +26,7 @@ export const Experience = () => {
             <div className="h-px w-16 bg-white/20" />
           </div>
 
-          <ExperienceContainer scrollContainerRef={scrollContainerRef} />
+          <ExperienceContainer />
         </div>
       </SnapSection>
     </div>

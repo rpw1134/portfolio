@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, RefObject } from "react";
+import { useEffect, useRef, useState } from "react";
 import { animate } from "animejs";
 import { ExperienceNode } from "./types";
 import { TimelineNode } from "./TimelineNode";
@@ -6,14 +6,9 @@ import { TimelineMinorNode } from "./TimelineMinorNode";
 
 interface TimelineProps {
   experiences: ExperienceNode[];
-  scrollContainerRef: RefObject<HTMLDivElement | null>;
 }
 
-export const Timeline = ({
-  experiences,
-  scrollContainerRef,
-}: TimelineProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
+export const Timeline = ({ experiences }: TimelineProps) => {
   const timelineRef = useRef<HTMLDivElement>(null);
   const nodesContainerRef = useRef<HTMLDivElement>(null);
   const nodeRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -37,19 +32,18 @@ export const Timeline = ({
   }, [experiences]);
 
   useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer) return;
-
     const handleScroll = () => {
-      if (!nodesContainerRef.current || !scrollContainer) return;
+      if (!nodesContainerRef.current) return;
 
-      const containerHeight = scrollContainer.clientHeight;
-      const scrollTop = scrollContainer.scrollTop;
-      const nodesTop = nodesContainerRef.current.offsetTop;
+      const nodesTop =
+        nodesContainerRef.current.getBoundingClientRect().top + window.scrollY;
 
-      // Use a focus point slightly above center for a more natural activation position
-      const focusOffsetRatio = 0.35;
-      const focusY = scrollTop + containerHeight * focusOffsetRatio - nodesTop;
+      const viewportHeight = window.innerHeight;
+
+      // Use a focus point closer to center so activation aligns near mid-viewport
+      const focusOffsetRatio = 0.5;
+      const focusY =
+        window.scrollY + viewportHeight * focusOffsetRatio - nodesTop;
 
       // Update fill height clamped to first/last nodes
       const clampedProgress = Math.max(
@@ -79,19 +73,13 @@ export const Timeline = ({
       }
     };
 
-    scrollContainer.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll(); // Initial call
 
     return () => {
-      scrollContainer.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [
-    experiences,
-    activeNodeId,
-    scrollContainerRef,
-    timelineStart,
-    timelineLength,
-  ]);
+  }, [experiences, activeNodeId, timelineStart, timelineLength]);
 
   // Animate timeline fill based on scroll progress
   useEffect(() => {
@@ -108,7 +96,7 @@ export const Timeline = ({
   }, [fillHeight]);
 
   return (
-    <div ref={containerRef} className="relative min-h-screen py-20">
+    <div className="relative min-h-screen pb-20">
       {/* Nodes and content */}
       <div ref={nodesContainerRef} className="relative space-y-28 py-8 pb-48">
         {/* Timeline line - slightly left of center for better balance */}

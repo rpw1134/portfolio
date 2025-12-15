@@ -41,7 +41,7 @@ export const Timeline = ({ experiences }: TimelineProps) => {
       const viewportHeight = window.innerHeight;
 
       // Use a focus point closer to center so activation aligns near mid-viewport
-      const focusOffsetRatio = 0.5;
+      const focusOffsetRatio = 0.55;
       const focusY =
         window.scrollY + viewportHeight * focusOffsetRatio - nodesTop;
 

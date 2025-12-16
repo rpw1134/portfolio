@@ -96,9 +96,9 @@ export const Timeline = ({ experiences }: TimelineProps) => {
   }, [fillHeight]);
 
   return (
-    <div className="relative min-h-screen pb-20">
+    <div className="relative min-h-screen">
       {/* Nodes and content */}
-      <div ref={nodesContainerRef} className="relative space-y-28 py-8 pb-48">
+      <div ref={nodesContainerRef} className="relative space-y-28 py-8">
         {/* Timeline line - slightly left of center for better balance */}
         <div
           ref={timelineRef}

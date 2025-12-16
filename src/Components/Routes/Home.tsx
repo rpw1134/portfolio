@@ -3,7 +3,6 @@ import { QuoteHighlight } from "../QuoteHighlight";
 import { SnapSection } from "../splash_page_sections/SnapSection";
 import WhatImWorkingOn from "../splash_page_sections/WhatImWorkingOn";
 import ScrollIndicator from "../splash_page_sections/ScrollIndicator";
-import Contact from "../splash_page_sections/Contact";
 import InfrastructureDevOpsScroller from "../splash_page_scrollers/InfrastructureDevOpsScroller";
 import MyGoals from "../splash_page_sections/MyGoals";
 import LibFrameworkScroller from "../splash_page_scrollers/LibFrameworkScroller";
@@ -45,7 +44,6 @@ export const Home = () => {
       <SnapSection backgroundColor="bg-tertiary">
         <MyGoals />
       </SnapSection>
-      <Contact />
     </div>
   );
 };

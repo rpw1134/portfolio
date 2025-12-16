@@ -71,7 +71,7 @@ export const QuoteHighlight = ({
     <div className="flex flex-col animate-float">
       <p
         ref={containerRef}
-        className="text-8xl px-10 w-[48rem] font-garamond cursor-pointer"
+        className="text-7xl px-10 w-[60rem] font-garamond cursor-pointer mx-auto text-center"
         onMouseMove={handleMouseMove}
         onMouseLeave={() => setMousePos({ x: 0, y: 0 })}
       >
@@ -94,7 +94,7 @@ export const QuoteHighlight = ({
       </p>
       {authorLink ? (
         <a
-          className="ml-[40rem] italic font-garamond cursor-pointer"
+          className="ml-[60rem] italic font-garamond cursor-pointer"
           href={authorLink}
           target="_blank"
         >

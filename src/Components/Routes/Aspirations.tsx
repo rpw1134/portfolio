@@ -1,10 +1,10 @@
 import { QuoteHighlight } from "../QuoteHighlight";
-import { SnapSection } from "../splash_page_sections/SnapSection";
+import { Container } from "../splash_page_sections/Container";
 
 export const Aspirations = () => {
   return (
     <div className="w-screen h-auto">
-      <SnapSection backgroundColor="bg-charcoal" fullHeight={false}>
+      <Container backgroundColor="bg-charcoal" fullHeight={false}>
         <div className="h-auto min-h-screen min-w-screen flex flex-col relative">
           <div className="h-[93vh] w-[94vw] mx-auto my-auto bg-secondary rounded-lg flex flex-col justify-center items-center">
             <QuoteHighlight
@@ -15,7 +15,7 @@ export const Aspirations = () => {
             />
           </div>
         </div>
-      </SnapSection>
+      </Container>
     </div>
   );
 };

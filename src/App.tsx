@@ -4,11 +4,13 @@ import { Home } from "./components/routes/Home";
 import { Projects } from "./components/routes/Projects";
 import { Experience } from "./components/routes/Experience";
 import Layout from "./components/nav/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />

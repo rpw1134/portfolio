@@ -1,7 +1,8 @@
 import { useState } from "react";
+import BlueScreenOfDeath from "../svgs/BlueScreenOfDeath";
 
 interface CarouselProps {
-  images: string[];
+  images?: string[];
 }
 
 export const Carousel = ({ images }: CarouselProps) => {
@@ -9,13 +10,13 @@ export const Carousel = ({ images }: CarouselProps) => {
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? images!.length - 1 : prevIndex - 1
     );
   };
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === images!.length - 1 ? 0 : prevIndex + 1
     );
   };
 
@@ -25,8 +26,8 @@ export const Carousel = ({ images }: CarouselProps) => {
 
   if (!images || images.length === 0) {
     return (
-      <div className="w-full h-64 bg-secondary rounded-lg flex items-center justify-center">
-        <p className="font-lato text-white/40">No images available</p>
+      <div className="w-full h-48 rounded-lg overflow-hidden border border-white/10">
+        <BlueScreenOfDeath />
       </div>
     );
   }

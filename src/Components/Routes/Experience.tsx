@@ -1,11 +1,12 @@
 import { QuoteHighlight } from "../QuoteHighlight";
+import { Container } from "../splash_page_sections/Container";
 import { SnapSection } from "../splash_page_sections/SnapSection";
 import { ExperienceContainer } from "../experience_page/ExperienceContainer";
 
 export const Experience = () => {
   return (
     <div className="w-screen h-auto">
-      <SnapSection backgroundColor="bg-charcoal">
+      <Container backgroundColor="bg-charcoal">
         <div className="h-auto min-h-screen min-w-screen flex flex-col relative">
           <div className="h-[93vh] w-[94vw] mx-auto my-auto bg-secondary rounded-lg flex flex-col justify-center items-center">
             <QuoteHighlight
@@ -15,7 +16,7 @@ export const Experience = () => {
             />
           </div>
         </div>
-      </SnapSection>
+      </Container>
 
       <SnapSection backgroundColor="bg-tertiary" fullHeight={false}>
         <div className="w-[95vw] mx-auto bg-slate rounded-lg p-12">

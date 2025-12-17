@@ -8,7 +8,7 @@ export interface ProjectModalProps {
   title: string;
   description: string;
   tags: string[];
-  images: string[];
+  images?: string[];
   demoLink?: string;
   demoThumbnail?: string;
   hostedAt?: string;
@@ -172,7 +172,7 @@ export const ProjectModal = ({
               </div>
             )}
 
-            {githubLink && (
+            {githubLink ? (
               <a
                 href={githubLink}
                 target="_blank"
@@ -186,6 +186,15 @@ export const ProjectModal = ({
                   View on GitHub
                 </span>
               </a>
+            ) : (
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full">
+                <div className="w-5 h-5 text-white/40">
+                  <GitHubSVG />
+                </div>
+                <span className="font-lato text-sm text-white/40">
+                  This repository is currently private
+                </span>
+              </div>
             )}
           </div>
         </div>

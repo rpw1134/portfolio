@@ -7,7 +7,7 @@ export interface ProjectBoxProps {
   description: string;
   tags: string[];
   primaryTag: string;
-  images: string[];
+  images?: string[];
   demoLink?: string;
   demoThumbnail?: string;
   hostedAt?: string;

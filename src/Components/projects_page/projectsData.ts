@@ -5,45 +5,53 @@ import { ProjectBoxProps } from "./ProjectBox";
 const projectsData: ProjectBoxProps[] = [
   {
     id: "1",
-    title: "AI Research Assistant",
+    title: "Application Tracker",
     description:
-      "An intelligent research assistant that helps students find and analyze academic papers using natural language processing and machine learning.",
-    tags: ["Python", "NLP", "RAG", "LangChain"],
-    primaryTag: "ai",
-    images: ["/rag_dash.png", "/rag_menu.png", "/Solutions-of-AI-in-DevOps.png"],
-    githubLink: "https://github.com/yourusername/ai-research-assistant",
+      "A web application for tracking job applications and managing the job search process.",
+    tags: ["React", "TypeScript", "Web Development"],
+    primaryTag: "web",
   },
   {
     id: "2",
-    title: "Full-Stack E-Commerce Platform",
+    title: "Discuss McGill",
     description:
-      "A modern e-commerce platform built with React and Node.js, featuring real-time inventory management and secure payment processing.",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      "A discussion platform for McGill University students to connect and share information.",
+    tags: ["React", "Node.js", "Web Development"],
     primaryTag: "web",
-    images: ["/ryan_green.png", "/ryan_greenremovebg.png"],
-    hostedAt: "https://example.com",
-    githubLink: "https://github.com/yourusername/ecommerce-platform",
-    demoLink: "https://demo.example.com",
   },
   {
     id: "3",
-    title: "Data Visualization Dashboard",
+    title: "RAG Pipeline",
     description:
-      "An interactive dashboard for visualizing complex datasets with real-time updates and customizable charts for business analytics.",
-    tags: ["D3.js", "TypeScript", "MongoDB", "WebSocket"],
+      "A Retrieval-Augmented Generation pipeline for processing and querying documents using AI.",
+    tags: ["Python", "RAG", "Data Processing", "AI"],
     primaryTag: "data",
-    images: ["/ryan_puerto_rico.png"],
-    githubLink: "https://github.com/yourusername/data-dashboard",
+    githubLink: "https://github.com/yourusername/rag-pipeline",
+  },
+  {
+    id: "4",
+    title: "MCP Client",
+    description:
+      "An AI-powered client implementation for Model Context Protocol.",
+    tags: ["AI", "Python", "MCP"],
+    primaryTag: "ai",
+    githubLink: "https://github.com/yourusername/mcp-client",
   },
   {
     id: "5",
-    title: "Cloud Infrastructure Automation",
+    title: "LeetGo",
     description:
-      "Automated deployment pipeline and infrastructure as code solution for managing cloud resources across multiple environments.",
-    tags: ["AWS", "Terraform", "Docker", "GitHub Actions"],
-    primaryTag: "infrastructure",
-    images: ["/rag_dash.png"],
-    githubLink: "https://github.com/yourusername/cloud-automation",
+      "An AI-assisted LeetCode problem solver and learning tool.",
+    tags: ["AI", "Algorithms", "Python"],
+    primaryTag: "ai",
+  },
+  {
+    id: "6",
+    title: "Web Agent",
+    description:
+      "An intelligent web automation agent powered by AI.",
+    tags: ["AI", "Automation", "Web"],
+    primaryTag: "ai",
   },
 ];
 

@@ -40,18 +40,17 @@ const projectsData: ProjectBoxProps[] = [
   {
     id: "5",
     title: "LeetGo",
-    description:
-      "An AI-assisted LeetCode problem solver and learning tool.",
+    description: "An AI-assisted LeetCode problem solver and learning tool.",
     tags: ["AI", "Algorithms", "Python"],
     primaryTag: "ai",
   },
   {
     id: "6",
     title: "Web Agent",
-    description:
-      "An intelligent web automation agent powered by AI.",
+    description: "An intelligent web automation agent powered by AI.",
     tags: ["AI", "Automation", "Web"],
     primaryTag: "ai",
+    inProgress: true,
   },
 ];
 

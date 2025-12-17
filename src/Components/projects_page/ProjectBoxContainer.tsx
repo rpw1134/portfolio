@@ -30,6 +30,8 @@ export const ProjectBoxContainer = () => {
             demoThumbnail={project.demoThumbnail}
             hostedAt={project.hostedAt}
             githubLink={project.githubLink}
+            inProgress={project.inProgress}
+            isLive={project.isLive}
             onClick={() => handleProjectClick(project)}
           />
         ))}

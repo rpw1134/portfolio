@@ -9,7 +9,6 @@ export interface ProjectBoxProps {
   primaryTag: string;
   images?: string[];
   demoLink?: string;
-  demoThumbnail?: string;
   hostedAt?: string;
   githubLink?: string;
   inProgress?: boolean;
@@ -55,7 +54,7 @@ export const ProjectBox = ({
       </div>
 
       <div className="flex flex-wrap gap-2">
-        {tags.map((tag, index) => (
+        {tags.slice(0, 4).map((tag, index) => (
           <span
             key={index}
             className="px-3 py-1 text-xs font-lato text-white/60 bg-white/5 border border-white/10 rounded-full mt-6"

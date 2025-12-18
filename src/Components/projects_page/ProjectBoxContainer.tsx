@@ -96,7 +96,6 @@ export const ProjectBoxContainer = () => {
             primaryTag={project.primaryTag}
             images={project.images}
             demoLink={project.demoLink}
-            demoThumbnail={project.demoThumbnail}
             hostedAt={project.hostedAt}
             githubLink={project.githubLink}
             inProgress={project.inProgress}
@@ -115,7 +114,6 @@ export const ProjectBoxContainer = () => {
           tags={selectedProject.tags}
           images={selectedProject.images}
           demoLink={selectedProject.demoLink}
-          demoThumbnail={selectedProject.demoThumbnail}
           hostedAt={selectedProject.hostedAt}
           githubLink={selectedProject.githubLink}
         />

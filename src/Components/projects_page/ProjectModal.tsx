@@ -10,7 +10,6 @@ export interface ProjectModalProps {
   tags: string[];
   images?: string[];
   demoLink?: string;
-  demoThumbnail?: string;
   hostedAt?: string;
   githubLink?: string;
 }
@@ -23,7 +22,6 @@ export const ProjectModal = ({
   tags,
   images,
   demoLink,
-  demoThumbnail,
   hostedAt,
   githubLink,
 }: ProjectModalProps) => {
@@ -85,117 +83,97 @@ export const ProjectModal = ({
           </svg>
         </button>
 
-        <div className="p-8 space-y-6">
-          <Carousel images={images} />
-
-          <div className="space-y-4">
-            <h2 className="font-garamond text-4xl font-light text-white">
-              {title}
-            </h2>
-
-            <p className="font-lato text-base font-light leading-relaxed text-white/70">
-              {description}
-            </p>
-
-            <div className="flex flex-wrap gap-2">
-              {tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 text-xs font-lato text-white/60 bg-white/5 border border-white/10 rounded-full"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {demoLink && (
-            <div className="space-y-2">
-              <h3 className="font-garamond text-xl font-light text-white">
-                Demo
-              </h3>
-              <a
-                href={demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block"
-              >
-                {demoThumbnail ? (
-                  <div className="relative overflow-hidden rounded-lg border border-white/10 hover:border-accent/30 transition-all duration-300">
-                    <img
-                      src={demoThumbnail}
-                      alt="Demo thumbnail"
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-all duration-300 flex items-center justify-center">
-                      <span className="font-lato text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-secondary/80 px-4 py-2 rounded-full">
-                        View Demo
-                      </span>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 hover:bg-accent/20 border border-accent/30 rounded-full transition-all duration-300">
-                    <span className="font-lato text-accent">View Demo</span>
-                    <svg
-                      className="w-4 h-4 text-accent"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </div>
-                )}
-              </a>
+        <div>
+          {/* Carousel Section - only if images exist */}
+          {images && images.length > 0 && (
+            <div className="bg-primary/30 p-6 border-b border-white/5">
+              <Carousel images={images} />
             </div>
           )}
 
-          <div className="flex flex-wrap gap-4 items-center pt-4 border-t border-white/10">
-            {hostedAt && (
-              <div className="flex items-center gap-2">
-                <span className="font-lato text-sm text-white/50">
-                  Hosted at:
-                </span>
-                <a
-                  href={hostedAt}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-lato text-sm text-accent hover:text-accent/80 transition-colors duration-300"
-                >
-                  {new URL(hostedAt).hostname}
-                </a>
-              </div>
-            )}
+          {/* Content Section */}
+          <div className="p-8 space-y-6">
+            {/* Header */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <h2 className="font-garamond text-4xl font-light text-white">
+                  {title}
+                </h2>
+                {githubLink ? (
+                  <a
+                    href={githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 w-8 h-8 text-white/60 hover:text-accent transition-colors duration-300 flex items-center justify-center"
+                    aria-label="View on GitHub"
+                  >
+                    <GitHubSVG />
+                  </a>
+                ) : (
+                  <div
+                    className="flex-shrink-0 w-8 h-8 text-white/20 cursor-not-allowed flex items-center justify-center"
+                    title="This repository is currently private"
+                  >
+                    <GitHubSVG />
+                  </div>
+                )}
 
-            {githubLink ? (
-              <a
-                href={githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-accent/30 rounded-full transition-all duration-300"
-              >
-                <div className="w-5 h-5 text-white">
-                  <GitHubSVG />
-                </div>
-                <span className="font-lato text-sm text-white">
-                  View on GitHub
-                </span>
-              </a>
-            ) : (
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full">
-                <div className="w-5 h-5 text-white/40">
-                  <GitHubSVG />
-                </div>
-                <span className="font-lato text-sm text-white/40">
-                  This repository is currently private
-                </span>
+                {hostedAt && (
+                  <a
+                    href={hostedAt}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 w-8 h-8 text-white/60 hover:text-accent transition-colors duration-300 flex items-center justify-center"
+                    aria-label="Open hosted site"
+                    title="Open hosted site"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6"
+                    >
+                      <path d="M10.5 13.5 13.5 10.5" />
+                      <path d="M9 16H7a4 4 0 0 1 0-8h3" />
+                      <path d="M15 8h2a4 4 0 0 1 0 8h-3" />
+                    </svg>
+                  </a>
+                )}
+
+                {demoLink && (
+                  <a
+                    href={demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 px-3 h-8 text-sm font-lato text-white/70 hover:text-white border border-white/20 hover:border-accent/50 rounded-full transition-all duration-300 flex items-center justify-center"
+                    aria-label="View demo"
+                    title="View demo"
+                  >
+                    Demo
+                  </a>
+                )}
               </div>
-            )}
+
+              <div className="flex flex-wrap gap-2">
+                {tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 text-xs font-lato text-white/60 bg-white/5 border border-white/10 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="font-lato text-base font-light leading-relaxed text-white/70">
+              {description}
+            </p>
           </div>
         </div>
       </div>

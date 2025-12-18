@@ -38,7 +38,7 @@ export const Carousel = ({ images }: CarouselProps) => {
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
       </div>
 
@@ -46,7 +46,7 @@ export const Carousel = ({ images }: CarouselProps) => {
         <>
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-secondary/80 hover:bg-secondary text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-white/10 hover:border-accent/30"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-secondary/80 hover:bg-secondary text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-white/10 hover:border-accent/30 cursor-pointer"
             aria-label="Previous image"
           >
             <svg
@@ -66,7 +66,7 @@ export const Carousel = ({ images }: CarouselProps) => {
 
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-secondary/80 hover:bg-secondary text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-white/10 hover:border-accent/30"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-secondary/80 hover:bg-secondary text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-white/10 hover:border-accent/30 cursor-pointer"
             aria-label="Next image"
           >
             <svg

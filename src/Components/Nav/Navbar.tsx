@@ -1,6 +1,10 @@
 import { NavLink } from "react-router";
+import { useEffect, useState } from "react";
 
 export const Navbar = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/projects", label: "Projects" },
@@ -8,8 +12,31 @@ export const Navbar = () => {
     { path: "/aspirations", label: "Aspirations" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show navbar when scrolling up or at the top
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        setIsVisible(true);
+      } else {
+        // Hide when scrolling down
+        setIsVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-secondary/20 hover:bg-primary/80 transition-all duration-300">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-secondary/20 hover:bg-primary/80 transition-all duration-500 ease-out ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="w-screen mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex px-10 justify-between items-center h-16">
           <div className="flex-shrink-0">

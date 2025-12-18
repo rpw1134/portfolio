@@ -18,7 +18,7 @@ export const Experience = () => {
         </div>
       </Container>
 
-      <SnapSection backgroundColor="bg-tertiary" fullHeight={false}>
+      <SnapSection backgroundColor="bg-tertiary" extend={true}>
         <div className="w-[95vw] mx-auto bg-slate rounded-lg p-12">
           <div className="space-y-8 mb-8">
             <h1 className="font-garamond text-7xl font-light text-white">

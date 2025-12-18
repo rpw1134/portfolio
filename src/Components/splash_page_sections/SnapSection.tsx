@@ -4,12 +4,14 @@ interface SnapSectionProps {
   children: React.ReactNode;
   backgroundColor?: string;
   fullHeight?: boolean;
+  extend?: boolean;
 }
 
 export const SnapSection = ({
   children,
   backgroundColor = "bg-primary",
   fullHeight = true,
+  extend = false,
 }: SnapSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [hasSnapped, setHasSnapped] = useState(false);
@@ -82,9 +84,13 @@ export const SnapSection = ({
     <div
       ref={sectionRef}
       className={`${
-        fullHeight ? "h-screen" : "min-h-screen pt-4 pb-16"
+        extend
+          ? "h-auto pt-4 pb-16"
+          : fullHeight
+          ? "h-screen"
+          : "min-h-screen pt-4 pb-16"
       } w-screen flex justify-center ${
-        fullHeight ? "items-center" : "items-start"
+        fullHeight && !extend ? "items-center" : "items-start"
       } ${backgroundColor}`}
     >
       {children}

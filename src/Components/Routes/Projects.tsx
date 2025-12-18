@@ -18,8 +18,8 @@ export const Projects = () => {
         </div>
       </Container>
 
-      <SnapSection backgroundColor="bg-tertiary">
-        <div className="w-[95vw] h-[95vh] mx-auto my-auto bg-slate rounded-lg p-12 overflow-y-auto">
+      <SnapSection backgroundColor="bg-tertiary" extend={true}>
+        <div className="w-[95vw] h-auto mx-auto my-auto bg-slate rounded-lg p-12 overflow-y-auto">
           <div className="space-y-8 mb-8">
             <h1 className="font-garamond text-7xl font-light text-white">
               Projects

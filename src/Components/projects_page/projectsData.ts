@@ -27,6 +27,7 @@ const projectsData: ProjectBoxProps[] = [
     tags: ["Python", "RAG", "Data Processing", "AI"],
     primaryTag: "data",
     githubLink: "https://github.com/yourusername/rag-pipeline",
+    demoLink: "https://www.loom.com/share/d081bb33fd954c3092c7503c7fbe3b14",
   },
   {
     id: "4",
@@ -51,6 +52,14 @@ const projectsData: ProjectBoxProps[] = [
     tags: ["AI", "Automation", "Web"],
     primaryTag: "ai",
     inProgress: true,
+  },
+  {
+    id: "7",
+    title: "Lauma",
+    description:
+      "A real-time collaborative discussion environment with natural AI integration.",
+    tags: ["Next.js", "Supabase", "Express.js", "LLM"],
+    primaryTag: "web",
   },
 ];
 

@@ -84,12 +84,10 @@ export const ProjectModal = ({
         </button>
 
         <div>
-          {/* Carousel Section - only if images exist */}
-          {images && images.length > 0 && (
-            <div className="bg-primary/30 p-6 border-b border-white/5">
-              <Carousel images={images} />
-            </div>
-          )}
+          {/* Carousel Section */}
+          <div className="bg-primary/30 p-6 border-b border-white/5">
+            <Carousel images={images} />
+          </div>
 
           {/* Content Section */}
           <div className="p-8 space-y-6">

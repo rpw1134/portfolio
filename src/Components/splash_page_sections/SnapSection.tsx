@@ -85,7 +85,7 @@ export const SnapSection = ({
       ref={sectionRef}
       className={`${
         extend
-          ? "h-auto pt-4 pb-16"
+          ? "min-h-screen max-h-auto pt-4 pb-16"
           : fullHeight
           ? "h-screen"
           : "min-h-screen pt-4 pb-16"

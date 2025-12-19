@@ -2,8 +2,16 @@ import { QuoteHighlight } from "../QuoteHighlight";
 import { Container } from "../splash_page_sections/Container";
 import { SnapSection } from "../splash_page_sections/SnapSection";
 import { ExperienceContainer } from "../experience_page/ExperienceContainer";
+import ScrollIndicator from "../splash_page_sections/ScrollIndicator";
 
 export const Experience = () => {
+  const scrollToExperience = () => {
+    const experienceSection = document.getElementById("experience-section");
+    if (experienceSection) {
+      experienceSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="w-screen h-auto">
       <Container backgroundColor="bg-charcoal">
@@ -15,11 +23,12 @@ export const Experience = () => {
               authorLink="https://en.wikipedia.org/wiki/Steve_Jobs"
             />
           </div>
+          <ScrollIndicator onClick={scrollToExperience} />
         </div>
       </Container>
 
       <SnapSection backgroundColor="bg-tertiary" extend={true}>
-        <div className="w-[95vw] mx-auto bg-slate rounded-lg p-12">
+        <div id="experience-section" className="w-[95vw] mx-auto bg-slate rounded-lg p-12">
           <div className="space-y-8 mb-8">
             <h1 className="font-garamond text-7xl font-light text-white">
               Experience

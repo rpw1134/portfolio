@@ -2,8 +2,16 @@ import { QuoteHighlight } from "../QuoteHighlight";
 import { Container } from "../splash_page_sections/Container";
 import { SnapSection } from "../splash_page_sections/SnapSection";
 import { ProjectBoxContainer } from "../projects_page/ProjectBoxContainer";
+import ScrollIndicator from "../splash_page_sections/ScrollIndicator";
 
 export const Projects = () => {
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projects-section");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="w-screen h-auto">
       <Container backgroundColor="bg-charcoal">
@@ -15,11 +23,12 @@ export const Projects = () => {
               authorLink="https://en.wikipedia.org/wiki/Edwin_H._Land"
             />
           </div>
+          <ScrollIndicator onClick={scrollToProjects} />
         </div>
       </Container>
 
       <SnapSection backgroundColor="bg-tertiary" extend={true}>
-        <div className="w-[95vw] min-h-screen max-h-auto mx-auto my-auto bg-slate rounded-lg p-12 overflow-y-auto">
+        <div id="projects-section" className="w-[95vw] min-h-screen max-h-auto mx-auto my-auto bg-slate rounded-lg p-12 overflow-y-auto">
           <div className="space-y-8 mb-8">
             <h1 className="font-garamond text-7xl font-light text-white">
               Projects

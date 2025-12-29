@@ -61,7 +61,8 @@ const projectsData: ProjectBoxProps[] = [
   {
     id: "5",
     title: "LeetGo",
-    description: "An AI-assisted LeetCode problem solver and learning tool.",
+    description:
+      "An AI-native, Leetcode style problem generation and sandboxing platform.",
     tags: [
       "React.js",
       "TypeScript",
@@ -79,11 +80,27 @@ const projectsData: ProjectBoxProps[] = [
     description: "An intelligent web automation agent powered by AI.",
     tags: ["FastAPI", "Python", "Playwright", "LLM Integration"],
     primaryTag: "ai",
-    inProgress: true,
     githubLink: "https://github.com/rpw1134/web-automation-agent",
   },
   {
     id: "7",
+    title: "Inference Server",
+    description:
+      "An AI inference server for deploying locally hosted models on Mac machines using Metal.",
+    tags: [
+      "FastAPI",
+      "Python",
+      "Next.js",
+      "TypeScript",
+      "Llama-Cpp",
+      "Metal",
+      "Hugging Face",
+    ],
+    primaryTag: "ai",
+    githubLink: "https://github.com/rpw1134/llm-inference-server",
+  },
+  {
+    id: "8",
     title: "Lauma",
     description:
       "A real-time collaborative discussion environment with natural AI integration.",
